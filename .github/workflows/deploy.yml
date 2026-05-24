@@ -1,0 +1,68 @@
+name: Deploy to GoDaddy cPanel
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build project
+        run: npm run build
+
+      - name: Create .htaccess
+        run: |
+          cat > dist/.htaccess << 'EOF'
+          RewriteEngine On
+          RewriteCond %{HTTPS} off
+          RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+          AddType text/css .css
+          AddType application/javascript .js
+          AddType application/json .json
+          AddType image/png .png
+          AddType image/jpeg .jpg .jpeg
+          AddType image/gif .gif
+          AddType image/svg+xml .svg
+          AddType image/webp .webp
+          AddType font/woff2 .woff2
+          AddType font/woff .woff
+          <IfModule mod_expires.c>
+            ExpiresActive On
+            ExpiresByType text/css "access plus 1 year"
+            ExpiresByType application/javascript "access plus 1 year"
+            ExpiresByType image/png "access plus 1 year"
+            ExpiresByType image/jpeg "access plus 1 year"
+            ExpiresByType image/gif "access plus 1 year"
+          </IfModule>
+          <IfModule mod_deflate.c>
+            AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json image/svg+xml
+          </IfModule>
+          RewriteCond %{REQUEST_FILENAME} !-f
+          RewriteCond %{REQUEST_FILENAME} !-d
+          RewriteRule ^(.*)$ /index.html [L]
+          EOF
+
+      - name: Deploy to GoDaddy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/
+          dangerous-clean-slate: false
