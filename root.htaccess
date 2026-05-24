@@ -1,0 +1,11 @@
+RewriteEngine On
+
+# 1. Do not rewrite if the request is already for the subdirectory
+RewriteCond %{REQUEST_URI} !^/agileqs.com/prakashfdsilva/
+
+# 2. Do not rewrite if the requested file/folder actually exists in the main public_html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 3. Rewrite all incoming traffic to load from the prakashfdsilva folder
+RewriteRule ^(.*)$ /agileqs.com/prakashfdsilva/$1 [L]
