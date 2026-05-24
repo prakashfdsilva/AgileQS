@@ -212,14 +212,6 @@ function parallaxImages() {
     aboutImg.style.transform = `translateY(${(progress - 0.5) * -60}px)`;
   }
 
-  // Storyboard images
-  document.querySelectorAll('.story-card-img img').forEach(img => {
-    const rect = img.closest('.story-card-img').getBoundingClientRect();
-    if (rect.bottom > 0 && rect.top < winH) {
-      const progress = (rect.top + rect.height / 2) / winH;
-      img.style.transform = `translateY(${(progress - 0.5) * -40}px)`;
-    }
-  });
 
   // Service card images
   document.querySelectorAll('.service-card-img').forEach(img => {

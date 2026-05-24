@@ -301,18 +301,7 @@
     }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
     document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
-    // Parallax on storyboard images
-    function parallaxImages() {
-      const winH = window.innerHeight;
-      document.querySelectorAll('.story-card-img img').forEach(img => {
-        const rect = img.closest('.story-card-img').getBoundingClientRect();
-        if (rect.bottom > 0 && rect.top < winH) {
-          const progress = (rect.top + rect.height / 2) / winH;
-          img.style.transform = `translateY(${(progress - 0.5) * -40}px)`;
-        }
-      });
-    }
-    window.addEventListener('scroll', parallaxImages, { passive: true });
+
 
     // Mobile menu
     const hamburger = document.getElementById('hamburger');
