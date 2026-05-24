@@ -54,7 +54,7 @@ jobs:
           </IfModule>
           RewriteCond %{REQUEST_FILENAME} !-f
           RewriteCond %{REQUEST_FILENAME} !-d
-          RewriteRule ^(.*)$ /index.html [L]
+          RewriteRule ^(.*)$ index.html [L]
           EOF
 
       - name: Deploy to GoDaddy via FTP
