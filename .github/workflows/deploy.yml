@@ -57,16 +57,12 @@ jobs:
           RewriteRule ^(.*)$ /index.html [L]
           EOF
 
-      - name: Install lftp
-        run: sudo apt-get install -y lftp
-
-      - name: Deploy via LFTP
-        run: |
-          lftp -u "${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }}" ${{ secrets.FTP_SERVER }} << SCRIPT
-          set ssl:verify-certificate no
-          set ftp:ssl-allow yes
-          set ftp:ssl-protect-data yes
-          set mirror:use-pget-n 5
-          mirror --reverse --delete --verbose --parallel=5 ./dist/ /
-          quit
-          SCRIPT
+      - name: Deploy to GoDaddy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: ./dist/
+          server-dir: /public_html/
+          dangerous-clean-slate: false
