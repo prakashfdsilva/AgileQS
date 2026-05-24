@@ -64,5 +64,8 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
-          server-dir: /public_html/
+          # If your FTP account is locked/jailed to public_html in cPanel, use './'.
+          # If it is the main cPanel FTP account, you may need to use './public_html/'.
+          server-dir: ./
           dangerous-clean-slate: false
+          log-level: verbose
