@@ -45,12 +45,20 @@ if (pEl) {
 }
 
 // ── NAVBAR ──
+const heroSlider = document.getElementById('heroSlider');
 window.addEventListener('scroll', () => {
   document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 50);
-  // Parallax hero
-  const heroBg = document.querySelector('.hero-bg');
-  if (heroBg) heroBg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
+  if (heroSlider) heroSlider.style.transform = `translateY(${window.scrollY * 0.4}px)`;
 });
+
+// ── HERO SLIDER ──
+const heroSlides = document.querySelectorAll('.hero-slide');
+let heroIdx = 0;
+setInterval(() => {
+  heroSlides[heroIdx]?.classList.remove('active');
+  heroIdx = (heroIdx + 1) % heroSlides.length;
+  heroSlides[heroIdx]?.classList.add('active');
+}, 5000);
 
 // ── MOBILE MENU ──
 const hamburger = document.getElementById('hamburger');
@@ -189,3 +197,40 @@ document.querySelectorAll('.service-card,.story-card').forEach(card => {
     card.style.transform = 'translateY(0) perspective(800px) rotateX(0) rotateY(0)';
   });
 });
+
+// ── PARALLAX IMAGES ──
+function parallaxImages() {
+  const scrollY = window.scrollY;
+  const winH = window.innerHeight;
+
+  // About image
+  const aboutImg = document.querySelector('.about-img');
+  if (aboutImg) {
+    const wrap = aboutImg.closest('.about-img-wrap');
+    const rect = wrap.getBoundingClientRect();
+    const progress = (rect.top + rect.height / 2) / winH;
+    aboutImg.style.transform = `translateY(${(progress - 0.5) * -60}px)`;
+  }
+
+  // Storyboard images
+  document.querySelectorAll('.story-card-img img').forEach(img => {
+    const rect = img.closest('.story-card-img').getBoundingClientRect();
+    if (rect.bottom > 0 && rect.top < winH) {
+      const progress = (rect.top + rect.height / 2) / winH;
+      img.style.transform = `translateY(${(progress - 0.5) * -40}px)`;
+    }
+  });
+
+  // Service card images
+  document.querySelectorAll('.service-card-img').forEach(img => {
+    const wrap = img.closest('div[style]');
+    if (!wrap) return;
+    const rect = wrap.getBoundingClientRect();
+    if (rect.bottom > 0 && rect.top < winH) {
+      const progress = (rect.top + rect.height / 2) / winH;
+      img.style.transform = `translateY(${(progress - 0.5) * -25}px) scale(1.1)`;
+    }
+  });
+}
+
+window.addEventListener('scroll', parallaxImages, { passive: true });

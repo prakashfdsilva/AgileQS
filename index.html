@@ -26,7 +26,6 @@
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
-      <li><a href="#methodology">Process</a></li>
       <li><a href="#storyboard">Story Board</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -39,7 +38,6 @@
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="closeMobile()">About</a>
     <a href="#services" onclick="closeMobile()">Services</a>
-    <a href="#methodology" onclick="closeMobile()">Process</a>
     <a href="#storyboard" onclick="closeMobile()">Story Board</a>
     <a href="#testimonials" onclick="closeMobile()">Testimonials</a>
     <a href="#contact" onclick="closeMobile()">Contact</a>
@@ -47,7 +45,11 @@
 
   <!-- HERO -->
   <section class="hero" id="hero">
-    <div class="hero-bg"></div>
+    <div class="hero-slider" id="heroSlider">
+      <div class="hero-slide active" style="background-image:url('/images/hero_slide_1.png')"></div>
+      <div class="hero-slide" style="background-image:url('/images/hero_slide_2.png')"></div>
+      <div class="hero-slide" style="background-image:url('/images/hero_slide_3.png')"></div>
+    </div>
     <div class="hero-particles" id="particles"></div>
     <div class="hero-content">
       <div class="hero-badge">Consultancy · Training · Certification · Audit</div>
@@ -66,7 +68,7 @@
     <div class="stat-item reveal"><div class="stat-number" data-target="11">0<span>+</span></div><div class="stat-label">B2B Partners</div></div>
     <div class="stat-item reveal reveal-delay-1"><div class="stat-number" data-target="9">0<span>+</span></div><div class="stat-label">Countries Served</div></div>
     <div class="stat-item reveal reveal-delay-2"><div class="stat-number" data-target="99">0<span>+</span></div><div class="stat-label">Clients Consulted</div></div>
-    <div class="stat-item reveal reveal-delay-3"><div class="stat-number" data-target="23">0<span>+</span></div><div class="stat-label">Industries Served</div></div>
+    <div class="stat-item reveal reveal-delay-3"><div class="stat-number" data-target="27">0<span>+</span></div><div class="stat-label">Industries Served</div></div>
   </div>
 
   <!-- ABOUT -->
@@ -78,7 +80,7 @@
       </div>
       <div class="about-text">
         <div class="section-tag reveal">About Us</div>
-        <h2 class="section-title reveal reveal-delay-1">We Refine Processes To Add Value</h2>
+        <h2 class="section-title reveal reveal-delay-1">Why Choose Us? </h2>
         <p class="section-desc reveal reveal-delay-2">Agile Quality Solutions is a prime consultancy majorly into B2B model of service delivery handling certifications, audit and compliances across industries. Founded in the year 2014 with a total track record of its seed promoter being more than 26 years in service.</p>
         <p class="section-desc reveal reveal-delay-2" style="margin-top:1rem">Our quality of services, competent prices along with our ability to build changes without disturbing the existing processes has helped us gain popularity across clientele.</p>
         <div class="about-features">
@@ -94,7 +96,10 @@
             <div class="about-feature-icon">⬡</div>
             <div><h4>Hands-On Approach</h4><p>Long term continued support with successful completion of every project.</p></div>
           </div>
-        </div>
+          <div class="about-feature reveal reveal-delay-5">
+            <div class="about-feature-icon">◇</div>
+            <div><h4>Seamless Integration</h4><p>Ability to build changes without disturbing the existing processes.</p></div>
+          </div>
       </div>
     </div>
   </section>
@@ -154,7 +159,7 @@
       </div>
       <div class="service-card reveal reveal-delay-2" data-category="comp">
         <div style="overflow:hidden"><img src="/images/compliance_audit.png" alt="Compliance &amp; Audit Services" class="service-card-img" /></div>
-        <div class="service-card-body"><div class="service-card-tag">SOC-II · GDPR · DPDPA · ITIL · IRDA Audit</div><h3>Compliance & Audit Services</h3><p>Comprehensive internal audits, SOC-II, GDPR compliance, DPDPA Compliance, ITIL frameworks and IRDA Audits.</p></div>
+        <div class="service-card-body"><div class="service-card-tag">SOC-II · GDPR · DPDPA · ITIL · IRDA Audit · MPAA</div><h3>Compliance & Audit Services</h3><p>Comprehensive internal audits, SOC-II, GDPR compliance, DPDPA Compliance, ITIL frameworks, IRDA Audits and MPAA Best Practices.</p></div>
         <div class="service-card-line"></div>
       </div>
       <div class="service-card reveal" data-category="cert">
@@ -168,32 +173,13 @@
         <div class="service-card-line"></div>
       </div>
       <div class="service-card reveal reveal-delay-2" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/mpaa_certification.png" alt="MPAA" class="service-card-img" /></div>
-        <div class="service-card-body"><div class="service-card-tag">MPAA</div><h3>Motion Picture Association of America</h3><p>MPAA Best Practices Certification.</p></div>
+        <div style="overflow:hidden"><img src="/images/iso_42001.png" alt="ISO 42001" class="service-card-img" /></div>
+        <div class="service-card-body"><div class="service-card-tag">ISO 42001</div><h3>AI Management System</h3><p>Establish responsible AI governance with a management system for artificial intelligence development, deployment and use.</p></div>
         <div class="service-card-line"></div>
       </div>
     </div>
   </section>
 
-  <!-- METHODOLOGY -->
-  <section class="section methodology-section" id="methodology">
-    <div class="services-header">
-      <div class="section-tag reveal">Our Methodology</div>
-      <h2 class="section-title reveal reveal-delay-1">7-Step Process</h2>
-    </div>
-    <div class="method-steps reveal">
-      <div class="method-step active" data-step="0"><span class="method-icon">💬</span><h4>Determine</h4></div>
-      <div class="method-step" data-step="1"><span class="method-icon">✏️</span><h4>Document</h4></div>
-      <div class="method-step" data-step="2"><span class="method-icon">⚙️</span><h4>Implement</h4></div>
-      <div class="method-step" data-step="3"><span class="method-icon">🔍</span><h4>Audit</h4></div>
-      <div class="method-step" data-step="4"><span class="method-icon">🔧</span><h4>Correct</h4></div>
-      <div class="method-step" data-step="5"><span class="method-icon">👥</span><h4>Review</h4></div>
-      <div class="method-step" data-step="6"><span class="method-icon">💡</span><h4>Improve</h4></div>
-    </div>
-    <div class="method-desc reveal" id="methodDesc">
-      <p>GAP Assessment exercise helps determine the level of controls implemented in the organisation. A report is prepared to identify the area to be analyzed and identify the goals to be accomplished.</p>
-    </div>
-  </section>
 
   <!-- EVALUATION -->
   <section class="section" id="evaluation">
@@ -292,7 +278,7 @@
         </div>
       </div>
 
-      <div class="story-card reveal reveal-delay-1">
+      <div class="story-card reveal reveal-delay-2">
         <div class="story-card-img"><img src="/images/storyboard/nuture-health-solutions.jpg" alt="Nuture Health Solutions" /></div>
         <div class="story-card-body">
           <div class="story-card-meta"><span class="date">January 14, 2022</span></div>
@@ -301,7 +287,7 @@
         </div>
       </div>
 
-      <div class="story-card reveal reveal-delay-2">
+      <div class="story-card reveal">
         <div class="story-card-img"><img src="/images/storyboard/Tata-Chemicals.jpg" alt="Tata Chemicals" /></div>
         <div class="story-card-body">
           <div class="story-card-meta"><span class="date">December 2, 2021</span></div>
@@ -310,117 +296,9 @@
         </div>
       </div>
 
-      <div class="story-card reveal">
-        <div class="story-card-img"><img src="/images/storyboard/5thdimension.gif" alt="5th Dimension Media" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">July 19, 2021</span></div>
-          <h3>5th Dimension Media</h3>
-          <p>ISO 27001 Imp, Doc, Training. ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-1">
-        <div class="story-card-img"><img src="/images/storyboard/aajtak.gif" alt="AAJ TAK News" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">July 13, 2021</span></div>
-          <h3>AAJ TAK News</h3>
-          <p>ISO 27001 Impl, Doc, Training... ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-2">
-        <div class="story-card-img"><img src="/images/storyboard/BNP-Paribas-560x390.png" alt="BNP Paribas India" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">July 9, 2021</span></div>
-          <h3>BNP Paribas India</h3>
-          <p>ISO 9001, ISO 27001 ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal">
-        <div class="story-card-img"><img src="/images/storyboard/Netscribes-1-560x390.png" alt="Netscribes" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">June 16, 2021</span></div>
-          <h3>Netscribes</h3>
-          <p>ISO 9001 and 27001 at Netscribes ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-1">
-        <div class="story-card-img"><img src="/images/storyboard/shortlist.png" alt="Shortlist Professionals" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">February 26, 2021</span></div>
-          <h3>Shortlist Professionals</h3>
-          <p>ISO 27001 ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-2">
-        <div class="story-card-img"><img src="/images/storyboard/Kuwait-Petroleum1-2-560x390.gif" alt="Kuwait Gulf Oil Company" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">December 3, 2020</span></div>
-          <h3>Kuwait Gulf Oil Company.</h3>
-          <p>ISO 27001 Lead Auditor training ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal">
-        <div class="story-card-img"><img src="/images/storyboard/Automation-anywhere-560x390.png" alt="Automation Anywhere Inc" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">November 6, 2020</span></div>
-          <h3>Automation Anywhere Inc</h3>
-          <p>ISO 27001, ISO 22301 ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-1">
-        <div class="story-card-img"><img src="/images/storyboard/LRN-1-560x390.png" alt="LRN Technologies" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">October 21, 2020</span></div>
-          <h3>LRN Technologies</h3>
-          <p>ISO 27001 ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-2">
-        <div class="story-card-img"><img src="/images/storyboard/Fusion-Practices-5-560x390.jpg" alt="Fusion Practices" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">August 25, 2020</span></div>
-          <h3>Fusion Practices</h3>
-          <p>ISO 9001, ISO 27001 ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal">
-        <div class="story-card-img"><img src="/images/storyboard/BTS-1-560x390.jpg" alt="BTS Technologies" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">March 13, 2020</span></div>
-          <h3>BTS Technologies</h3>
-          <p>ISO 27001 Internal Audit ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-1">
-        <div class="story-card-img"><img src="/images/storyboard/Bigshare-services-560x390.jpg" alt="Bigshare Services" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">December 13, 2019</span></div>
-          <h3>Bigshare Services Pvt Ltd.</h3>
-          <p>ISO 27001, ISO 9001 ...</p>
-        </div>
-      </div>
-
-      <div class="story-card reveal reveal-delay-2">
-        <div class="story-card-img"><img src="/images/storyboard/sb1.jpg" alt="Andromeda" /></div>
-        <div class="story-card-body">
-          <div class="story-card-meta"><span class="date">October 18, 2019</span></div>
-          <h3>Andromeda</h3>
-          <p>ISO 27001 ...</p>
-        </div>
-      </div>
-
     </div>
     <div class="story-view-all reveal">
-      <button class="btn-primary"><span>View All Stories</span></button>
+      <a href="/storyboard.html" class="btn-primary"><span>View All Stories</span></a>
     </div>
   </section>
 
@@ -643,7 +521,6 @@
         <h4>Company</h4>
         <ul>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#methodology">Our Process</a></li>
           <li><a href="#storyboard">Story Board</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
