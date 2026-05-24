@@ -1,0 +1,9 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/agileqsc/public_html/
+    - /bin/cp -R dist/.htaccess $DEPLOYPATH
+    - /bin/cp -R dist/index.html $DEPLOYPATH
+    - /bin/cp -R dist/storyboard.html $DEPLOYPATH
+    - /bin/cp -R dist/assets $DEPLOYPATH
+    - /bin/cp -R dist/images $DEPLOYPATH
