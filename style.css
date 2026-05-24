@@ -127,9 +127,9 @@ body{font-family:'Inter',sans-serif;background:#ffffff;color:var(--text);overflo
 .service-card:hover{transform:translateY(-6px);border-color:var(--orange);box-shadow:0 20px 50px rgba(232,148,26,.1)}
 .service-card-img{width:100%;height:180px;object-fit:cover;filter:brightness(.55) saturate(.8);transition:all .5s}
 .service-card:hover .service-card-img{filter:brightness(.75) saturate(1);transform:scale(1.05)}
-.service-card-body{padding:1.5rem}
-.service-card-tag{font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:.6rem}
-.service-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--blue);margin-bottom:.6rem;transition:color .3s}
+.service-card-body{padding:0.2rem}
+.service-card-tag{font-size:.6rem;letter-spacing:2px;text-transform:uppercase;color:var(--orange);margin-bottom:.2rem}
+.service-card h3{font-family:'Playfair Display',serif;font-size:1.05rem;color:var(--blue);margin-bottom:.2rem;transition:color .3s}
 .service-card:hover h3{color:var(--orange)}
 .service-card p{font-size:.8rem;color:var(--text-muted);line-height:1.7}
 .service-card-line{position:absolute;bottom:0;left:0;width:0;height:2px;background:linear-gradient(90deg,var(--orange),var(--orange-light));transition:width .5s}
