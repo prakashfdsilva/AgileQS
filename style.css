@@ -39,18 +39,23 @@ body{font-family:'Inter',sans-serif;background:#ffffff;color:var(--text);overflo
 /* ── NAVBAR ── */
 .navbar{position:fixed;top:0;left:0;right:0;z-index:1000;padding:1rem 4rem;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
 .navbar.scrolled{background:rgba(255,255,255,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(27,75,140,0.1);padding:.7rem 4rem}
-.nav-logo img{height:38px;transition:height .3s}
-.navbar.scrolled .nav-logo img{height:32px}
+.nav-logo img{height:38px;transition:all .3s;filter:brightness(0) invert(1)}
+.navbar.scrolled .nav-logo img{height:32px;filter:none}
 .nav-links{display:flex;gap:2.2rem;list-style:none}
-.nav-links a{color:var(--text-muted);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;position:relative;transition:color .3s}
+.nav-links a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.8rem;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;position:relative;transition:color .3s}
 .nav-links a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;background:var(--orange);transition:width .3s}
-.nav-links a:hover{color:var(--blue)}
+.nav-links a:hover{color:#ffffff}
 .nav-links a:hover::after{width:100%}
-.nav-cta{padding:.55rem 1.6rem;background:transparent;border:1px solid var(--orange);color:var(--orange);font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'Inter',sans-serif}
-.nav-cta:hover{background:var(--orange);color:#ffffff}
+.navbar.scrolled .nav-links a{color:var(--text-muted)}
+.navbar.scrolled .nav-links a:hover{color:var(--blue)}
+.nav-cta{padding:.55rem 1.6rem;background:transparent;border:1px solid rgba(255,255,255,.5);color:#ffffff;font-size:.75rem;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;font-family:'Inter',sans-serif}
+.nav-cta:hover{background:var(--orange);color:#ffffff;border-color:var(--orange)}
+.navbar.scrolled .nav-cta{border-color:var(--orange);color:var(--orange)}
+.navbar.scrolled .nav-cta:hover{background:var(--orange);color:#ffffff}
 
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:1001}
-.hamburger span{width:28px;height:2px;background:var(--blue);transition:all .3s}
+.hamburger span{width:28px;height:2px;background:#ffffff;transition:all .3s}
+.navbar.scrolled .hamburger span{background:var(--blue)}
 
 /* ── MOBILE MENU ── */
 .mobile-menu{display:none;position:fixed;inset:0;z-index:999;background:rgba(255,255,255,.98);backdrop-filter:blur(20px);flex-direction:column;align-items:center;justify-content:center;gap:2rem}
