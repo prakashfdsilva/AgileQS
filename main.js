@@ -245,13 +245,15 @@ function parallaxImages() {
   const scrollY = window.scrollY;
   const winH = window.innerHeight;
 
-  // About image
+  // About image — strong parallax
   const aboutImg = document.querySelector('.about-img');
   if (aboutImg) {
     const wrap = aboutImg.closest('.about-img-wrap');
     const rect = wrap.getBoundingClientRect();
-    const progress = (rect.top + rect.height / 2) / winH;
-    aboutImg.style.transform = `translateY(${(progress - 0.5) * -60}px)`;
+    if (rect.bottom > 0 && rect.top < winH) {
+      const progress = (rect.top + rect.height / 2) / winH;
+      aboutImg.style.transform = `translateY(${(progress - 0.5) * -120}px)`;
+    }
   }
 
 
