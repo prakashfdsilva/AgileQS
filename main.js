@@ -51,14 +51,56 @@ window.addEventListener('scroll', () => {
   if (heroSlider) heroSlider.style.transform = `translateY(${window.scrollY * 0.4}px)`;
 });
 
-// ── HERO SLIDER ──
+// ── HERO SLIDER (enhanced with Ken Burns + indicators) ──
 const heroSlides = document.querySelectorAll('.hero-slide');
+const heroDots = document.querySelectorAll('.hero-dot');
 let heroIdx = 0;
-setInterval(() => {
+const SLIDE_INTERVAL = 6000; // synced with dot-fill animation
+
+function goToSlide(idx) {
+  // Remove active from current
   heroSlides[heroIdx]?.classList.remove('active');
-  heroIdx = (heroIdx + 1) % heroSlides.length;
-  heroSlides[heroIdx]?.classList.add('active');
-}, 5000);
+  heroDots[heroIdx]?.classList.remove('active');
+  // Reset Ken Burns animation by removing and re-adding the class
+  heroSlides[heroIdx]?.style.setProperty('animation', 'none');
+  
+  heroIdx = idx % heroSlides.length;
+  
+  // Activate new slide
+  const newSlide = heroSlides[heroIdx];
+  if (newSlide) {
+    // Force reflow to restart animation
+    newSlide.style.setProperty('animation', 'none');
+    newSlide.offsetHeight; // trigger reflow
+    newSlide.style.removeProperty('animation');
+    newSlide.classList.add('active');
+  }
+  
+  // Activate dot with progress restart
+  const newDot = heroDots[heroIdx];
+  if (newDot) {
+    // Restart dot-fill animation
+    const progress = newDot.querySelector('.dot-progress');
+    if (progress) {
+      progress.style.animation = 'none';
+      progress.offsetHeight;
+      progress.style.animation = '';
+    }
+    newDot.classList.add('active');
+  }
+}
+
+// Auto-advance
+let heroTimer = setInterval(() => goToSlide(heroIdx + 1), SLIDE_INTERVAL);
+
+// Dot click handlers
+heroDots.forEach(dot => {
+  dot.addEventListener('click', () => {
+    clearInterval(heroTimer);
+    goToSlide(parseInt(dot.dataset.slide));
+    heroTimer = setInterval(() => goToSlide(heroIdx + 1), SLIDE_INTERVAL);
+  });
+});
 
 // ── MOBILE MENU ──
 const hamburger = document.getElementById('hamburger');
