@@ -1072,16 +1072,16 @@ body {
 }
 
 .story-card-body {
-  padding: 0.5rem 0.5rem
+  padding: 0.25rem 0.5rem
 }
 
 .story-card-meta {
   display: flex;
   align-items: center;
-  gap: .8rem;
+  gap: .5rem;
   font-size: .68rem;
   color: var(--text-muted);
-  margin-bottom: .5rem
+  margin-bottom: .2rem
 }
 
 .story-card-meta .date {
