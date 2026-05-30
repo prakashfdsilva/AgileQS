@@ -101,29 +101,6 @@ body {
   }
 }
 
-/* ── CURSOR ── */
-.cursor {
-  position: fixed;
-  width: 20px;
-  height: 20px;
-  border: 2px solid var(--orange);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10000;
-  transition: transform .15s
-}
-
-.cursor-follower {
-  position: fixed;
-  width: 8px;
-  height: 8px;
-  background: var(--orange);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 10000;
-  transition: transform .08s
-}
-
 /* ── NAVBAR ── */
 .navbar {
   position: fixed;
@@ -1584,11 +1561,6 @@ body {
 
   .nav-links,
   .nav-cta {
-    display: none;
-  }
-
-  .cursor,
-  .cursor-follower {
     display: none;
   }
 

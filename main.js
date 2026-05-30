@@ -9,25 +9,6 @@ window.addEventListener('load', () => {
   });
 });
 
-// ── CUSTOM CURSOR ──
-const cursor = document.getElementById('cursor');
-const follower = document.getElementById('cursorFollower');
-let mx = 0, my = 0, cx = 0, cy = 0, fx = 0, fy = 0;
-document.addEventListener('mousemove', e => { mx = e.clientX; my = e.clientY; });
-function animCursor() {
-  cx += (mx - cx) * 0.15; cy += (my - cy) * 0.15;
-  fx += (mx - fx) * 0.25; fy += (my - fy) * 0.25;
-  if (cursor) cursor.style.transform = `translate(${cx - 10}px,${cy - 10}px)`;
-  if (follower) follower.style.transform = `translate(${fx - 4}px,${fy - 4}px)`;
-  requestAnimationFrame(animCursor);
-}
-animCursor();
-
-document.querySelectorAll('a,button,.service-card,.story-card,.contact-item,.method-step').forEach(el => {
-  el.addEventListener('mouseenter', () => { if (cursor) { cursor.style.width = '36px'; cursor.style.height = '36px'; cursor.style.borderColor = '#E8941A'; }});
-  el.addEventListener('mouseleave', () => { if (cursor) { cursor.style.width = '20px'; cursor.style.height = '20px'; cursor.style.borderColor = '#E8941A'; }});
-});
-
 // ── PARTICLES ──
 const pEl = document.getElementById('particles');
 if (pEl) {
