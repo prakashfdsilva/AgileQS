@@ -204,6 +204,38 @@ export const stories = [
     desc: 'ISO 27001 ...',
     img: '/images/storyboard/Viacom18.jpg',
     alt: 'Viacom 18'
+  },
+  {
+    date: '2014-02-11',
+    label: 'February 11, 2014',
+    title: 'Capital First',
+    desc: 'ITIL v3 Implementation',
+    img: '/images/storyboard/Capital First.jpg',
+    alt: 'Capital First'
+  },
+  {
+    date: '2016-01-27',
+    label: 'January 27, 2016',
+    title: 'Universal Sompo General Insurance',
+    desc: 'ISO 22301 (BCMS)',
+    img: '/images/storyboard/UniversalSompo1.JPG',
+    alt: 'Universal Sompo General Insurance'
+  },
+  {
+    date: '2018-09-06',
+    label: 'September 6, 2018',
+    title: 'IDFC Bank',
+    desc: 'ISO 27001',
+    img: '/images/storyboard/IDFCBank.jpg',
+    alt: 'IDFC Bank'
+  },
+  {
+    date: '2016-07-20',
+    label: 'July 20, 2016',
+    title: '63 Moons Technologies Ltd.',
+    desc: 'ISO 27001, ISO 9001, ISO 14001, ISO 22301',
+    img: '/images/storyboard/63moons.jpg',
+    alt: '63 Moons Technologies Ltd.'
   }
 ];
 
