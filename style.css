@@ -329,6 +329,20 @@ body {
   }
 }
 
+.hero-slide.kenburns-4.active {
+  animation: kenburns4 8s ease-in-out forwards
+}
+
+@keyframes kenburns4 {
+  0% {
+    transform: scale(1.08) translate(1.5%, 1%)
+  }
+
+  100% {
+    transform: scale(1) translate(-1%, -0.5%)
+  }
+}
+
 /* Dark overlay for readability — adjusted for dark cybersecurity images */
 .hero-slide::after {
   content: '';
