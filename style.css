@@ -1425,9 +1425,19 @@ body {
   align-items: flex-start;
 }
 
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
 .footer-brand .nav-logo {
   display: block;
-  margin-bottom: 0rem;
+  margin-bottom: .6rem;
+}
+
+.footer-brand .nav-logo img {
+  filter: none;
 }
 
 .footer-brand p {
@@ -1435,6 +1445,7 @@ body {
   color: #1a1a1a;
   line-height: 1.7;
   max-width: 300px;
+  text-align: left;
 }
 
 .footer-col h4 {
