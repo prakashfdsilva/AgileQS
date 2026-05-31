@@ -17,7 +17,7 @@ export const stories = [
     date: '2024-08-02',
     label: 'August 2, 2024',
     title: 'AiraMATRIX',
-    desc: 'ISO 27001 ...',
+    desc: 'ISO 27001, FDA, CE,',
     img: '/images/storyboard/Airamatrix.jpg',
     alt: 'AiraMATRIX'
   },
