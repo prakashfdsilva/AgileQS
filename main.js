@@ -1,4 +1,5 @@
 import './style.css';
+import { renderStoryCards } from './stories.js';
 
 // ── PRELOADER ──
 window.addEventListener('load', () => {
@@ -108,6 +109,22 @@ const revealObs = new IntersectionObserver(entries => {
   entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('active'); });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+// ── DYNAMIC STORY BOARD (homepage shows latest 9, sorted by date) ──
+renderStoryCards('#storyGrid', 9);
+// Re-attach scroll-reveal & tilt to dynamically created story cards
+document.querySelectorAll('#storyGrid .reveal').forEach(el => revealObs.observe(el));
+document.querySelectorAll('#storyGrid .story-card').forEach(card => {
+  card.addEventListener('mousemove', e => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform = `translateY(-6px) perspective(800px) rotateX(${-y * 4}deg) rotateY(${x * 4}deg)`;
+  });
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = 'translateY(0) perspective(800px) rotateX(0) rotateY(0)';
+  });
+});
 
 // ── COUNTER ANIMATION ──
 function animateCounter(el, suffix) {
