@@ -14,6 +14,22 @@
  */
 export const stories = [
   {
+    date: '2026-02-27',
+    label: 'February 27, 2026',
+    title: 'Markets and Markets Ltd.',
+    desc: 'ISO 27001, GDPR, SOC-2 Type-II',
+    img: '/images/storyboard/MnM1.jpg',
+    alt: 'Markets and Markets Ltd.'
+  },
+  {
+    date: '2025-07-31',
+    label: 'July 31, 2025',
+    title: 'XcubeLabs',
+    desc: 'ISO 27001',
+    img: '/images/storyboard/XcubeLabs.jpg',
+    alt: 'XcubeLabs'
+  },
+  {
     date: '2024-08-02',
     label: 'August 2, 2024',
     title: 'AiraMATRIX',
