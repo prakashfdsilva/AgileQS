@@ -822,7 +822,8 @@ body {
 
 /* ── SERVICES GRID ── */
 .services-section {
-  background: linear-gradient(180deg, #f7f8fa 0%, #ffffff 100%)
+  background: linear-gradient(180deg, #f7f8fa 0%, #ffffff 100%);
+  padding-bottom: 3rem
 }
 
 .services-header {
@@ -1016,7 +1017,8 @@ body {
 
 /* ── STORYBOARD ── */
 .storyboard-section {
-  background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%)
+  background: linear-gradient(180deg, #ffffff 0%, #f7f8fa 100%);
+  padding-top: 3rem
 }
 
 .story-grid {
