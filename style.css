@@ -657,7 +657,7 @@ body {
   display: inline-flex;
   align-items: center;
   gap: .5rem;
-  font-size: .7rem;
+  font-size: .89rem;
   letter-spacing: 3px;
   text-transform: uppercase;
   color: var(--orange);
