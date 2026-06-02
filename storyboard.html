@@ -11,10 +11,12 @@
     .sb-hero{padding:10rem 4rem 4rem;background:linear-gradient(180deg,#f7f8fa 0%,#ffffff 100%);text-align:center}
     .sb-hero .section-title{margin-bottom:.5rem}
     .sb-hero .section-desc{margin:0 auto}
-    .sb-back{display:inline-flex;align-items:center;gap:.5rem;color:var(--blue);text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;margin-bottom:2rem;transition:color .3s}
-    .sb-back:hover{color:var(--orange)}
+    .sb-back{display:inline-flex;align-items:center;gap:.5rem;color:var(--blue);text-decoration:none;font-size:.8rem;font-weight:600;letter-spacing:1px;text-transform:uppercase;transition:all .3s;padding:.6rem 1.2rem;border:1px solid var(--glass-border);background:var(--glass)}
+    .sb-back:hover{color:var(--orange);border-color:var(--orange);transform:translateX(-4px)}
     .sb-back svg{width:18px;height:18px;transition:transform .3s}
-    .sb-back:hover svg{transform:translateX(-4px)}
+    .sb-back:hover svg{transform:translateX(-3px)}
+    .sb-back-top{text-align:left;margin-bottom:2rem}
+    .sb-back-bottom{text-align:left;margin-top:3rem}
     .sb-grid-section{padding:3rem 4rem 6rem}
     @media(max-width:768px){
       .sb-hero{padding:7rem 1.5rem 3rem}
@@ -49,10 +51,12 @@
 
   <!-- HERO -->
   <div class="sb-hero">
-    <a href="/" class="sb-back">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
-      Back to Home
-    </a>
+    <div class="sb-back-top">
+      <a href="/" class="sb-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        Back to Home
+      </a>
+    </div>
     <div class="section-tag">Story Board</div>
     <h1 class="section-title">Across The Globe, Diverse Industries.</h1>
     <p class="section-desc">Our track record of successful consultancy, certification, and audit engagements across industries worldwide.</p>
@@ -62,6 +66,12 @@
   <section class="sb-grid-section">
     <div class="story-grid" id="storyGrid">
       <!-- Stories are dynamically rendered from stories.js, sorted by date (newest first) -->
+    </div>
+    <div class="sb-back-bottom">
+      <a href="/" class="sb-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7"/></svg>
+        Back to Home
+      </a>
     </div>
   </section>
 
