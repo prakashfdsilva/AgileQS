@@ -278,7 +278,7 @@ export function renderStoryCards(gridSelector, limit = null) {
 
   grid.innerHTML = items.map((story, i) => `
     <div class="story-card reveal ${delayClasses[i % 3]}">
-      <div class="story-card-img"><img src="${story.img}" alt="${story.alt}" loading="lazy" /></div>
+      <div class="story-card-img"><img src="${story.img}" alt="${story.alt}" /></div>
       <div class="story-card-body">
         <div class="story-card-meta"><span class="date">${story.label}</span></div>
         <h3>${story.title}</h3>

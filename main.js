@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
 // ── PARTICLES ──
 const pEl = document.getElementById('particles');
 if (pEl) {
+  const frag = document.createDocumentFragment();
   for (let i = 0; i < 35; i++) {
     const p = document.createElement('div');
     p.className = 'particle';
@@ -22,16 +23,29 @@ if (pEl) {
     p.style.width = p.style.height = (Math.random() * 3 + 1) + 'px';
     // Mix blue and orange particles
     p.style.background = Math.random() > 0.5 ? '#E8941A' : '#2563EB';
-    pEl.appendChild(p);
+    frag.appendChild(p);
   }
+  pEl.appendChild(frag);
 }
 
-// ── NAVBAR ──
+// ── NAVBAR (throttled scroll) ──
 const heroSlider = document.getElementById('heroSlider');
-window.addEventListener('scroll', () => {
-  document.getElementById('navbar')?.classList.toggle('scrolled', window.scrollY > 50);
-  if (heroSlider) heroSlider.style.transform = `translateY(${window.scrollY * 0.4}px)`;
-});
+const navbar = document.getElementById('navbar');
+let ticking = false;
+
+function onScroll() {
+  if (!ticking) {
+    requestAnimationFrame(() => {
+      const scrollY = window.scrollY;
+      navbar?.classList.toggle('scrolled', scrollY > 50);
+      if (heroSlider) heroSlider.style.transform = `translateY(${scrollY * 0.4}px)`;
+      parallaxImages(scrollY);
+      ticking = false;
+    });
+    ticking = true;
+  }
+}
+window.addEventListener('scroll', onScroll, { passive: true });
 
 // ── HERO SLIDER (enhanced with Ken Burns + indicators) ──
 const heroSlides = document.querySelectorAll('.hero-slide');
@@ -238,9 +252,8 @@ document.querySelectorAll('.service-card,.story-card').forEach(card => {
   });
 });
 
-// ── PARALLAX IMAGES ──
-function parallaxImages() {
-  const scrollY = window.scrollY;
+// ── PARALLAX IMAGES (called from rAF-throttled scroll handler) ──
+function parallaxImages(scrollY) {
   const winH = window.innerHeight;
 
   // About image — strong parallax
@@ -266,5 +279,3 @@ function parallaxImages() {
     }
   });
 }
-
-window.addEventListener('scroll', parallaxImages, { passive: true });
