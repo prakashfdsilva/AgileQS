@@ -59,9 +59,9 @@ function goToSlide(idx) {
   heroDots[heroIdx]?.classList.remove('active');
   // Reset Ken Burns animation by removing and re-adding the class
   heroSlides[heroIdx]?.style.setProperty('animation', 'none');
-  
+
   heroIdx = idx % heroSlides.length;
-  
+
   // Activate new slide
   const newSlide = heroSlides[heroIdx];
   if (newSlide) {
@@ -71,7 +71,7 @@ function goToSlide(idx) {
     newSlide.style.removeProperty('animation');
     newSlide.classList.add('active');
   }
-  
+
   // Activate dot with progress restart
   const newDot = heroDots[heroIdx];
   if (newDot) {
