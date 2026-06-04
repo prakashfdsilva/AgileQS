@@ -1,4 +1,3 @@
-
 *,
 *::before,
 *::after {
@@ -770,6 +769,7 @@ body {
     text-align: center;
     gap: 3rem;
   }
+
   .about-text {
     text-align: center;
     display: flex;
