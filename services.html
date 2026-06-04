@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Agile Quality Solutions — Compliance & Risk Advisory Services. ISO Consultancy, Certification, and Audit across international standards." />
+  <title>Compliance & Risk Advisory Services — Agile Quality Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700&display=swap" />
+  <link rel="stylesheet" href="/style.css" />
+  <link rel="icon" href="/images/logo.webp" />
+  <style>
+    .sb-hero {
+      padding: 10rem 4rem 4rem;
+      background: linear-gradient(180deg, #f7f8fa 0%, #ffffff 100%);
+      text-align: center
+    }
+
+    .sb-hero .section-title {
+      margin-bottom: .5rem
+    }
+
+    .sb-hero .section-desc {
+      margin: 0 auto;
+      max-width: 800px;
+      font-size: 1.1rem;
+      color: var(--text-light);
+      line-height: 1.6
+    }
+
+    .sb-back {
+      display: inline-flex;
+      align-items: center;
+      gap: .5rem;
+      color: var(--blue);
+      text-decoration: none;
+      font-size: .8rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      transition: all .3s;
+      padding: .6rem 1.2rem;
+      border: 1px solid var(--glass-border);
+      background: var(--glass)
+    }
+
+    .sb-back:hover {
+      color: var(--orange);
+      border-color: var(--orange);
+      transform: translateX(-4px)
+    }
+
+    .sb-back svg {
+      width: 18px;
+      height: 18px;
+      transition: transform .3s
+    }
+
+    .sb-back:hover svg {
+      transform: translateX(-3px)
+    }
+
+    .sb-back-top {
+      text-align: left;
+      margin-bottom: 2rem
+    }
+
+    .sb-back-bottom {
+      text-align: left;
+      margin-top: 3rem;
+      padding: 0 4rem;
+    }
+
+    @media(max-width:768px) {
+      .sb-hero {
+        padding: 7rem 1.5rem 3rem
+      }
+
+      .sb-back-bottom {
+        padding: 0 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar scrolled" id="navbar">
+    <a href="/" class="nav-logo"><img src="/images/logo.webp" alt="Agile Quality Solutions" /></a>
+    <ul class="nav-links">
+      <li><a href="/#about">About</a></li>
+      <li><a href="/services.html" class="active">Services</a></li>
+      <li><a href="/storyboard.html">Story Board</a></li>
+      <li><a href="/#testimonials">Testimonials</a></li>
+      <li><a href="/#contact">Contact</a></li>
+    </ul>
+    <button class="nav-cta" onclick="window.location.href='/#contact'">Get In Touch</button>
+    <div class="hamburger" id="hamburger"><span></span><span></span><span></span></div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="/#about" onclick="closeMobile()">About</a>
+    <a href="/services.html" onclick="closeMobile()">Services</a>
+    <a href="/storyboard.html" onclick="closeMobile()">Story Board</a>
+    <a href="/#testimonials" onclick="closeMobile()">Testimonials</a>
+    <a href="/#contact" onclick="closeMobile()">Contact</a>
+  </div>
+
+  <!-- HERO -->
+  <div class="sb-hero">
+    <div class="sb-back-top">
+      <a href="/" class="sb-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Home
+      </a>
+    </div>
+    <div class="section-tag">What We Do</div>
+    <h1 class="section-title">Compliance & Risk Advisory Services</h1>
+    <p class="section-desc">We support our B2B clients through specialized consulting, training, implementation and
+      audit services across international standards and regulatory frameworks.</p>
+  </div>
+
+  <!-- ALL SERVICES -->
+  <section class="section services-section" id="services" style="padding-top:2rem;">
+    <div class="services-filter reveal">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="cert">Certification</button>
+      <button class="filter-btn" data-filter="comp">Compliances</button>
+    </div>
+    <div class="services-grid">
+      <div class="service-card reveal" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_quality.webp" loading="lazy" alt="ISO 9001"
+            class="service-card-img" /></div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 9001</div>
+          <h3>Quality Management</h3>
+          <p>Establish a robust quality management framework ensuring consistent delivery and continuous improvement.
+          </p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-1" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_infosec.webp" loading="lazy" alt="ISO 27001"
+            class="service-card-img" />
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 27001</div>
+          <h3>Information Security</h3>
+          <p>Protect your organization's information assets with a comprehensive security management system.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-2" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_privacy.webp" loading="lazy" alt="ISO 27701"
+            class="service-card-img" />
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 27701</div>
+          <h3>Data Privacy</h3>
+          <p>Build trust through a privacy management system ensuring compliance with global data protection
+            regulations.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_itservice.webp" loading="lazy" alt="ISO 20000-1"
+            class="service-card-img" />
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 20000-1</div>
+          <h3>IT Service Management</h3>
+          <p>Optimize IT service delivery with industry-standard best practices for efficiency and reliability.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-1" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_continuity.webp" loading="lazy" alt="ISO 22301"
+            class="service-card-img" />
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 22301</div>
+          <h3>Business Continuity</h3>
+          <p>Ensure your organization can continue operating through disruptions with a proven BCM system.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-2" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_environment.webp" loading="lazy" alt="ISO 14001"
+            class="service-card-img" />
+        </div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 14001</div>
+          <h3>Environmental Management</h3>
+          <p>Demonstrate commitment to environmental responsibility with systematic impact management.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_safety.webp" loading="lazy" alt="ISO 45001"
+            class="service-card-img" /></div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 45001</div>
+          <h3>Occupational Health & Safety</h3>
+          <p>Create a safer workplace with proactive health and safety management preventing work-related injuries.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-1" data-category="comp">
+        <div style="overflow:hidden"><img src="/images/iso_finance.webp" loading="lazy" alt="SEBI"
+            class="service-card-img" /></div>
+        <div class="service-card-body">
+          <div class="service-card-tag">SEBI / IRDA</div>
+          <h3>SEBI and IRDA Audits</h3>
+          <p>Navigate complex regulatory landscapes for financial services with confidence and compliance.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-2" data-category="comp">
+        <div style="overflow:hidden"><img src="/images/compliance_audit.webp" loading="lazy"
+            alt="Compliance &amp; Audit Services" class="service-card-img" /></div>
+        <div class="service-card-body">
+          <div class="service-card-tag">SOC-II · GDPR · DPDPA · ITIL · MPAA</div>
+          <h3>Compliance & Audit Services</h3>
+          <p>Comprehensive internal audits, SOC-II, GDPR compliance, DPDPA Compliance, ITIL frameworks, IRDA Audits and
+            MPAA Best Practices.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_cloud_security.webp" loading="lazy" alt="ISO 27017"
+            class="service-card-img" /></div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 27017</div>
+          <h3>Cloud Security Compliance</h3>
+          <p>Code of practice for information security controls based on ISO/IEC 27002 for cloud services.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-1" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_cloud_privacy.webp" loading="lazy" alt="ISO 27018"
+            class="service-card-img" /></div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 27018</div>
+          <h3>Cloud Privacy Compliance</h3>
+          <p>Code of practice for protection of personally identifiable information (PII) in public clouds acting as PII
+            processors.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+      <div class="service-card reveal reveal-delay-2" data-category="cert">
+        <div style="overflow:hidden"><img src="/images/iso_42001.webp" loading="lazy" alt="ISO 42001"
+            class="service-card-img" /></div>
+        <div class="service-card-body">
+          <div class="service-card-tag">ISO 42001</div>
+          <h3>AI Management System</h3>
+          <p>Establish responsible AI governance with a management system for artificial intelligence development,
+            deployment and use.</p>
+        </div>
+        <div class="service-card-line"></div>
+      </div>
+    </div>
+
+    <div class="sb-back-bottom">
+      <a href="/" class="sb-back">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M15 19l-7-7 7-7" />
+        </svg>
+        Back to Home
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="/" class="nav-logo"><img src="/images/logo.webp" alt="Agile Quality Solutions" /></a>
+        <p>ISO Consultancy, Training, Certification, Audit and Compliances — your trusted partner in achieving
+          excellence.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Certification</h4>
+        <ul>
+          <li><a href="/services.html">ISO 9001</a></li>
+          <li><a href="/services.html">ISO 27001</a></li>
+          <li><a href="/services.html">ISO 27701</a></li>
+          <li><a href="/services.html">ISO 22301</a></li>
+          <li><a href="/services.html">ISO 14001</a></li>
+          <li><a href="/services.html">ISO 20001-1</a></li>
+          <li><a href="/services.html">ISO 27017</a></li>
+          <li><a href="/services.html">ISO 27018</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Compliances</h4>
+        <ul>
+          <li><a href="/services.html">SOC-II</a></li>
+          <li><a href="/services.html">GDPR</a></li>
+          <li><a href="/services.html">DPDPA</a></li>
+          <li><a href="/services.html">ITIL</a></li>
+          <li><a href="/services.html">IRDA Audit</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="/#about">About Us</a></li>
+          <li><a href="/storyboard.html">Story Board</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/profile.php?id=100063772793675" target="_blank">Facebook</a></li>
+          <li><a href="https://www.linkedin.com/company/agile-quality-solutions/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/prakash.dsilva/" target="_blank">Instagram</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; Agile Quality Solutions. All rights reserved.</p>
+      <p>Crafted with excellence</p>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+
+</html>
