@@ -7,6 +7,7 @@ export default defineConfig({
       input: {
         main: resolve(__dirname, 'index.html'),
         storyboard: resolve(__dirname, 'storyboard.html'),
+        services: resolve(__dirname, 'services.html'),
       },
     },
   },

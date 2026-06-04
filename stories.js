@@ -185,7 +185,7 @@ export const stories = [
     date: '2020-08-25',
     label: 'August 25, 2020',
     title: 'Fusion Practices',
-    desc: 'ISO 9001, ISO 27001 ...',
+    desc: 'ISO 9001, ISO 27001, ISO 14001, ISO 20000-1',
     img: '/images/storyboard/Fusion-Practices-5-560x390.webp',
     alt: 'Fusion Practices'
   },
