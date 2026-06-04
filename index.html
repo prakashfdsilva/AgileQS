@@ -32,7 +32,7 @@
     <a href="#" class="nav-logo"><img src="/images/logo.webp" alt="Agile Quality Solutions" /></a>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#services">Services</a></li>
+      <li><a href="/services.html">Services</a></li>
       <li><a href="#storyboard">Story Board</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -45,7 +45,7 @@
   <!-- MOBILE MENU -->
   <div class="mobile-menu" id="mobileMenu">
     <a href="#about" onclick="closeMobile()">About</a>
-    <a href="#services" onclick="closeMobile()">Services</a>
+    <a href="/services.html" onclick="closeMobile()">Services</a>
     <a href="#storyboard" onclick="closeMobile()">Story Board</a>
     <a href="#testimonials" onclick="closeMobile()">Testimonials</a>
     <a href="#contact" onclick="closeMobile()">Contact</a>
@@ -219,11 +219,6 @@
       <p class="section-desc reveal reveal-delay-2">We support our B2B clients through specialized consulting, training,
         implementation and audit services across international standards and regulatory frameworks.</p>
     </div>
-    <div class="services-filter reveal">
-      <button class="filter-btn active" data-filter="all">All</button>
-      <button class="filter-btn" data-filter="cert">Certification</button>
-      <button class="filter-btn" data-filter="comp">Compliances</button>
-    </div>
     <div class="services-grid">
       <div class="service-card reveal" data-category="cert">
         <div style="overflow:hidden"><img src="/images/iso_quality.webp" loading="lazy" alt="ISO 9001"
@@ -259,102 +254,9 @@
         </div>
         <div class="service-card-line"></div>
       </div>
-      <div class="service-card reveal" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/iso_itservice.webp" loading="lazy" alt="ISO 20000-1"
-            class="service-card-img" />
-        </div>
-        <div class="service-card-body">
-          <div class="service-card-tag">ISO 20000-1</div>
-          <h3>IT Service Management</h3>
-          <p>Optimize IT service delivery with industry-standard best practices for efficiency and reliability.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal reveal-delay-1" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/iso_continuity.webp" loading="lazy" alt="ISO 22301"
-            class="service-card-img" />
-        </div>
-        <div class="service-card-body">
-          <div class="service-card-tag">ISO 22301</div>
-          <h3>Business Continuity</h3>
-          <p>Ensure your organization can continue operating through disruptions with a proven BCM system.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal reveal-delay-2" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/iso_environment.webp" loading="lazy" alt="ISO 14001"
-            class="service-card-img" />
-        </div>
-        <div class="service-card-body">
-          <div class="service-card-tag">ISO 14001</div>
-          <h3>Environmental Management</h3>
-          <p>Demonstrate commitment to environmental responsibility with systematic impact management.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/iso_safety.webp" loading="lazy" alt="ISO 45001"
-            class="service-card-img" /></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">ISO 45001</div>
-          <h3>Occupational Health & Safety</h3>
-          <p>Create a safer workplace with proactive health and safety management preventing work-related injuries.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal reveal-delay-1" data-category="comp">
-        <div style="overflow:hidden"><img src="/images/iso_finance.webp" loading="lazy" alt="SEBI"
-            class="service-card-img" /></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">SEBI / IRDA</div>
-          <h3>SEBI and IRDA Audits</h3>
-          <p>Navigate complex regulatory landscapes for financial services with confidence and compliance.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal reveal-delay-2" data-category="comp">
-        <div style="overflow:hidden"><img src="/images/compliance_audit.webp" loading="lazy"
-            alt="Compliance &amp; Audit Services" class="service-card-img" /></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">SOC-II · GDPR · DPDPA · ITIL · MPAA</div>
-          <h3>Compliance & Audit Services</h3>
-          <p>Comprehensive internal audits, SOC-II, GDPR compliance, DPDPA Compliance, ITIL frameworks, IRDA Audits and
-            MPAA Best Practices.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/iso_cloud_security.webp" loading="lazy" alt="ISO 27017"
-            class="service-card-img" /></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">ISO 27017</div>
-          <h3>Cloud Security Compliance</h3>
-          <p>Code of practice for information security controls based on ISO/IEC 27002 for cloud services.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal reveal-delay-1" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/iso_cloud_privacy.webp" loading="lazy" alt="ISO 27018"
-            class="service-card-img" /></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">ISO 27018</div>
-          <h3>Cloud Privacy Compliance</h3>
-          <p>Code of practice for protection of personally identifiable information (PII) in public clouds acting as PII
-            processors.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
-      <div class="service-card reveal reveal-delay-2" data-category="cert">
-        <div style="overflow:hidden"><img src="/images/iso_42001.webp" loading="lazy" alt="ISO 42001"
-            class="service-card-img" /></div>
-        <div class="service-card-body">
-          <div class="service-card-tag">ISO 42001</div>
-          <h3>AI Management System</h3>
-          <p>Establish responsible AI governance with a management system for artificial intelligence development,
-            deployment and use.</p>
-        </div>
-        <div class="service-card-line"></div>
-      </div>
+    </div>
+    <div class="story-view-all reveal" style="text-align: center; margin-top: 3rem;">
+      <a href="/services.html" class="btn-primary"><span>View All Services</span></a>
     </div>
   </section>
 
@@ -657,24 +559,24 @@
       <div class="footer-col">
         <h4>Certification</h4>
         <ul>
-          <li><a href="#services">ISO 9001</a></li>
-          <li><a href="#services">ISO 27001</a></li>
-          <li><a href="#services">ISO 27701</a></li>
-          <li><a href="#services">ISO 22301</a></li>
-          <li><a href="#services">ISO 14001</a></li>
-          <li><a href="#services">ISO 20001-1</a></li>
-          <li><a href="#services">ISO 27017</a></li>
-          <li><a href="#services">ISO 27018</a></li>
+          <li><a href="/services.html">ISO 9001</a></li>
+          <li><a href="/services.html">ISO 27001</a></li>
+          <li><a href="/services.html">ISO 27701</a></li>
+          <li><a href="/services.html">ISO 22301</a></li>
+          <li><a href="/services.html">ISO 14001</a></li>
+          <li><a href="/services.html">ISO 20001-1</a></li>
+          <li><a href="/services.html">ISO 27017</a></li>
+          <li><a href="/services.html">ISO 27018</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Compliances</h4>
         <ul>
-          <li><a href="#services">SOC-II</a></li>
-          <li><a href="#services">GDPR</a></li>
-          <li><a href="#services">DPDPA</a></li>
-          <li><a href="#services">ITIL</a></li>
-          <li><a href="#services">IRDA Audit</a></li>
+          <li><a href="/services.html">SOC-II</a></li>
+          <li><a href="/services.html">GDPR</a></li>
+          <li><a href="/services.html">DPDPA</a></li>
+          <li><a href="/services.html">ITIL</a></li>
+          <li><a href="/services.html">IRDA Audit</a></li>
         </ul>
       </div>
       <div class="footer-col">
