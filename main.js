@@ -125,7 +125,7 @@ const revealObs = new IntersectionObserver(entries => {
 document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
 
 // ── DYNAMIC STORY BOARD (homepage shows latest 9, sorted by date) ──
-renderStoryCards('#storyGrid', 9);
+renderStoryCards('#storyGrid', 6);
 // Re-attach scroll-reveal & tilt to dynamically created story cards
 document.querySelectorAll('#storyGrid .reveal').forEach(el => revealObs.observe(el));
 document.querySelectorAll('#storyGrid .story-card').forEach(card => {

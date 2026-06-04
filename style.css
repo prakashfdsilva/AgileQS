@@ -1665,3 +1665,23 @@ body {
     padding: 2.5rem 1.5rem;
   }
 }
+.btn-outline {
+  display: inline-block;
+  padding: .55rem 1.6rem;
+  background: transparent;
+  border: 1px solid var(--orange);
+  color: var(--orange);
+  font-size: .75rem;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all .3s;
+  font-family: 'Inter', sans-serif;
+  text-decoration: none;
+}
+.btn-outline:hover {
+  background: var(--orange);
+  color: #ffffff;
+  border-color: var(--orange);
+}
