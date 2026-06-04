@@ -18,7 +18,7 @@ export const stories = [
     label: 'February 27, 2026',
     title: 'Markets and Markets Ltd.',
     desc: 'ISO 27001, GDPR, SOC-2 Type-II',
-    img: '/images/storyboard/MnM1.jpg',
+    img: '/images/storyboard/MnM1.webp',
     alt: 'Markets and Markets Ltd.'
   },
   {
@@ -26,7 +26,7 @@ export const stories = [
     label: 'July 31, 2025',
     title: 'XcubeLabs',
     desc: 'ISO 27001',
-    img: '/images/storyboard/XcubeLabs.jpg',
+    img: '/images/storyboard/XcubeLabs.webp',
     alt: 'XcubeLabs'
   },
   {
@@ -34,7 +34,7 @@ export const stories = [
     label: 'August 2, 2024',
     title: 'AiraMATRIX',
     desc: 'ISO 27001, FDA, CE,',
-    img: '/images/storyboard/Airamatrix.jpg',
+    img: '/images/storyboard/Airamatrix.webp',
     alt: 'AiraMATRIX'
   },
   {
@@ -42,7 +42,7 @@ export const stories = [
     label: 'March 20, 2024',
     title: 'Parekh Integrated Services',
     desc: 'ISO 27001 ...',
-    img: '/images/storyboard/Parekh.jpg',
+    img: '/images/storyboard/Parekh.webp',
     alt: 'Parekh Integrated Services'
   },
   {
@@ -50,7 +50,7 @@ export const stories = [
     label: 'June 27, 2023',
     title: 'RV Forms &amp; Gears',
     desc: 'ISO 9001 &amp; 27001 Consultancy ...',
-    img: '/images/storyboard/RVFG.png',
+    img: '/images/storyboard/RVFG.webp',
     alt: 'RV Forms & Gears'
   },
   {
@@ -58,7 +58,7 @@ export const stories = [
     label: 'December 27, 2022',
     title: 'AccelerateBS LTD.',
     desc: 'ISO 9001 &amp; 27001 Consultancy ...',
-    img: '/images/storyboard/AccelerateBS.png',
+    img: '/images/storyboard/AccelerateBS.webp',
     alt: 'AccelerateBS'
   },
   {
@@ -66,7 +66,7 @@ export const stories = [
     label: 'November 17, 2022',
     title: 'Health India TPA',
     desc: 'ISO 9001 and 27001 Consultancy ...',
-    img: '/images/storyboard/HealthIndiaTPA.png',
+    img: '/images/storyboard/HealthIndiaTPA.webp',
     alt: 'Health India TPA'
   },
   {
@@ -74,7 +74,7 @@ export const stories = [
     label: 'October 27, 2022',
     title: 'Vlinder Labs',
     desc: 'ISO 27001 Consultancy ...',
-    img: '/images/storyboard/Vlinder-labs.png',
+    img: '/images/storyboard/Vlinder-labs.webp',
     alt: 'Vlinder Labs'
   },
   {
@@ -82,7 +82,7 @@ export const stories = [
     label: 'August 29, 2022',
     title: 'SecuGen India',
     desc: 'ISO 27001 Consultancy ...',
-    img: '/images/storyboard/Secugen.png',
+    img: '/images/storyboard/Secugen.webp',
     alt: 'SecuGen India'
   },
   {
@@ -90,7 +90,7 @@ export const stories = [
     label: 'May 24, 2022',
     title: 'Olive Green LLP',
     desc: 'ISO 27001 External Audit ...',
-    img: '/images/storyboard/Olive-Green.png',
+    img: '/images/storyboard/Olive-Green.webp',
     alt: 'Olive Green LLP'
   },
   {
@@ -98,7 +98,7 @@ export const stories = [
     label: 'May 13, 2022',
     title: 'CheckExplore Tech',
     desc: 'ISO 27001 External Audit ...',
-    img: '/images/storyboard/CheckExplore-Technologies.png',
+    img: '/images/storyboard/CheckExplore-Technologies.webp',
     alt: 'CheckExplore Tech'
   },
   {
@@ -106,7 +106,7 @@ export const stories = [
     label: 'January 14, 2022',
     title: 'Nuture Health Solutions',
     desc: 'ISO 27001 Imp, Doc, Training. ...',
-    img: '/images/storyboard/nuture-health-solutions.jpg',
+    img: '/images/storyboard/nuture-health-solutions.webp',
     alt: 'Nuture Health Solutions'
   },
   {
@@ -114,7 +114,7 @@ export const stories = [
     label: 'December 2, 2021',
     title: 'Tata Chemicals',
     desc: 'ISO 22301 (BCM) Imp, Doc, Training. ...',
-    img: '/images/storyboard/Tata-Chemicals.jpg',
+    img: '/images/storyboard/Tata-Chemicals.webp',
     alt: 'Tata Chemicals'
   },
   {
@@ -122,7 +122,7 @@ export const stories = [
     label: 'July 19, 2021',
     title: '5th Dimension Media',
     desc: 'ISO 27001 Imp, Doc, Training. ...',
-    img: '/images/storyboard/5thdimension.gif',
+    img: '/images/storyboard/5thdimension.webp',
     alt: '5th Dimension Media'
   },
   {
@@ -130,7 +130,7 @@ export const stories = [
     label: 'July 13, 2021',
     title: 'AAJ TAK News',
     desc: 'ISO 27001 Impl, Doc, Training... ...',
-    img: '/images/storyboard/aajtak.gif',
+    img: '/images/storyboard/aajtak.webp',
     alt: 'AAJ TAK News'
   },
   {
@@ -138,7 +138,7 @@ export const stories = [
     label: 'July 9, 2021',
     title: 'BNP Paribas India',
     desc: 'ISO 9001, ISO 27001 ...',
-    img: '/images/storyboard/BNP-Paribas-560x390.png',
+    img: '/images/storyboard/BNP-Paribas-560x390.webp',
     alt: 'BNP Paribas India'
   },
   {
@@ -146,7 +146,7 @@ export const stories = [
     label: 'June 16, 2021',
     title: 'Netscribes',
     desc: 'ISO 9001 and 27001 at Netscribes ...',
-    img: '/images/storyboard/Netscribes.jpg',
+    img: '/images/storyboard/Netscribes.webp',
     alt: 'Netscribes'
   },
   {
@@ -154,7 +154,7 @@ export const stories = [
     label: 'February 26, 2021',
     title: 'Shortlist Professionals',
     desc: 'ISO 27001 ...',
-    img: '/images/storyboard/shortlist.png',
+    img: '/images/storyboard/shortlist.webp',
     alt: 'Shortlist Professionals'
   },
   {
@@ -162,7 +162,7 @@ export const stories = [
     label: 'December 3, 2020',
     title: 'Kuwait Gulf Oil Company.',
     desc: 'ISO 27001 Lead Auditor training ...',
-    img: '/images/storyboard/Kuwait-Petroleum1-2-560x390.gif',
+    img: '/images/storyboard/Kuwait-Petroleum1-2-560x390.webp',
     alt: 'Kuwait Gulf Oil Company'
   },
   {
@@ -170,7 +170,7 @@ export const stories = [
     label: 'November 6, 2020',
     title: 'Automation Anywhere Inc',
     desc: 'ISO 27001, ISO 22301 ...',
-    img: '/images/storyboard/Automation-anywhere-560x390.png',
+    img: '/images/storyboard/Automation-anywhere-560x390.webp',
     alt: 'Automation Anywhere Inc'
   },
   {
@@ -178,7 +178,7 @@ export const stories = [
     label: 'October 21, 2020',
     title: 'LRN Technologies',
     desc: 'ISO 27001 ...',
-    img: '/images/storyboard/LRN-1-560x390.png',
+    img: '/images/storyboard/LRN-1-560x390.webp',
     alt: 'LRN Technologies'
   },
   {
@@ -186,7 +186,7 @@ export const stories = [
     label: 'August 25, 2020',
     title: 'Fusion Practices',
     desc: 'ISO 9001, ISO 27001 ...',
-    img: '/images/storyboard/Fusion-Practices-5-560x390.jpg',
+    img: '/images/storyboard/Fusion-Practices-5-560x390.webp',
     alt: 'Fusion Practices'
   },
   {
@@ -194,7 +194,7 @@ export const stories = [
     label: 'March 13, 2020',
     title: 'BTS Technologies',
     desc: 'ISO 27001 Internal Audit ...',
-    img: '/images/storyboard/BTS-1-560x390.jpg',
+    img: '/images/storyboard/BTS-1-560x390.webp',
     alt: 'BTS Technologies'
   },
   {
@@ -202,7 +202,7 @@ export const stories = [
     label: 'December 13, 2019',
     title: 'Bigshare Services Pvt Ltd.',
     desc: 'ISO 27001, ISO 9001 ...',
-    img: '/images/storyboard/Bigshare-services-560x390.jpg',
+    img: '/images/storyboard/Bigshare-services-560x390.webp',
     alt: 'Bigshare Services'
   },
   {
@@ -210,7 +210,7 @@ export const stories = [
     label: 'October 18, 2019',
     title: 'Andromeda',
     desc: 'ISO 27001 ...',
-    img: '/images/storyboard/Andromeda.jpg',
+    img: '/images/storyboard/Andromeda.webp',
     alt: 'Andromeda'
   },
   {
@@ -218,7 +218,7 @@ export const stories = [
     label: 'August 10, 2019',
     title: 'Viacom 18',
     desc: 'ISO 27001 ...',
-    img: '/images/storyboard/Viacom18.jpg',
+    img: '/images/storyboard/Viacom18.webp',
     alt: 'Viacom 18'
   },
   {
@@ -226,7 +226,7 @@ export const stories = [
     label: 'February 11, 2014',
     title: 'Capital First',
     desc: 'ITIL v3 Implementation',
-    img: '/images/storyboard/Capital First.jpg',
+    img: '/images/storyboard/Capital First.webp',
     alt: 'Capital First'
   },
   {
@@ -234,7 +234,7 @@ export const stories = [
     label: 'January 27, 2016',
     title: 'Universal Sompo General Insurance',
     desc: 'ISO 22301 (BCMS)',
-    img: '/images/storyboard/UniversalSompo1.JPG',
+    img: '/images/storyboard/UniversalSompo1.webp',
     alt: 'Universal Sompo General Insurance'
   },
   {
@@ -242,7 +242,7 @@ export const stories = [
     label: 'September 6, 2018',
     title: 'IDFC Bank',
     desc: 'ISO 27001',
-    img: '/images/storyboard/IDFCBank.jpg',
+    img: '/images/storyboard/IDFCBank.webp',
     alt: 'IDFC Bank'
   },
   {
@@ -250,7 +250,7 @@ export const stories = [
     label: 'July 20, 2016',
     title: '63 Moons Technologies Ltd.',
     desc: 'ISO 27001, ISO 9001, ISO 14001, ISO 22301',
-    img: '/images/storyboard/63moons.jpg',
+    img: '/images/storyboard/63moons.webp',
     alt: '63 Moons Technologies Ltd.'
   }
 ];
@@ -278,7 +278,7 @@ export function renderStoryCards(gridSelector, limit = null) {
 
   grid.innerHTML = items.map((story, i) => `
     <div class="story-card reveal ${delayClasses[i % 3]}">
-      <div class="story-card-img"><img src="${story.img}" alt="${story.alt}" /></div>
+      <div class="story-card-img"><img src="${story.img}" loading="lazy" alt="${story.alt}" /></div>
       <div class="story-card-body">
         <div class="story-card-meta"><span class="date">${story.label}</span></div>
         <h3>${story.title}</h3>

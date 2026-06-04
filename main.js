@@ -3,7 +3,7 @@ import { renderStoryCards } from './stories.js';
 
 // ── PRELOADER ──
 window.addEventListener('load', () => {
-  setTimeout(() => document.getElementById('preloader')?.classList.add('hidden'), 2200);
+  setTimeout(() => document.getElementById('preloader')?.classList.add('hidden'), 300);
   // Duplicate marquee rows for seamless loop
   document.querySelectorAll('.marquee-track').forEach(track => {
     track.innerHTML += track.innerHTML;
