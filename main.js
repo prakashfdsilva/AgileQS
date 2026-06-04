@@ -37,8 +37,12 @@ function onScroll() {
   if (!ticking) {
     requestAnimationFrame(() => {
       const scrollY = window.scrollY;
-      navbar?.classList.toggle('scrolled', scrollY > 50);
-      if (heroSlider) heroSlider.style.transform = `translateY(${scrollY * 0.4}px)`;
+      if (heroSlider) {
+        navbar?.classList.toggle('scrolled', scrollY > 50);
+        heroSlider.style.transform = `translateY(${scrollY * 0.4}px)`;
+      } else {
+        navbar?.classList.add('scrolled');
+      }
       parallaxImages(scrollY);
       ticking = false;
     });
