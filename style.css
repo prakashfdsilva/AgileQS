@@ -1394,6 +1394,9 @@ body {
 }
 
 .marquee-logo {
+  color: transparent;
+  font-size: 0;
+  min-width: 100px;
   height: 45px;
   width: auto;
   max-width: 140px;
