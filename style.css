@@ -205,6 +205,22 @@ body {
   color: #ffffff
 }
 
+.nav-cta.whatsapp-cta:hover {
+  background: #25D366;
+  border-color: #25D366;
+  color: #ffffff;
+}
+
+.navbar.scrolled .nav-cta.whatsapp-cta {
+  border-color: #25D366;
+  color: #25D366;
+}
+
+.navbar.scrolled .nav-cta.whatsapp-cta:hover {
+  background: #25D366;
+  color: #ffffff;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
