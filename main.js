@@ -2,7 +2,26 @@ import './style.css';
 import { renderStoryCards } from './stories.js';
 
 // ── PRELOADER ──
+let preloaderInterval;
+const preloaderText = document.getElementById('preloaderText');
+if (preloaderText) {
+  let progress = 0;
+  // CSS animation is roughly 2s
+  preloaderInterval = setInterval(() => {
+    progress += 1;
+    if (progress >= 100) {
+      progress = 100;
+      clearInterval(preloaderInterval);
+    }
+    preloaderText.innerText = progress + '%';
+  }, 20);
+}
+
 window.addEventListener('load', () => {
+  if (preloaderText) {
+    clearInterval(preloaderInterval);
+    preloaderText.innerText = '100%';
+  }
   setTimeout(() => document.getElementById('preloader')?.classList.add('hidden'), 300);
   // Duplicate marquee rows for seamless loop
   document.querySelectorAll('.marquee-track').forEach(track => {

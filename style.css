@@ -93,6 +93,15 @@ body {
   animation: preload 2s ease forwards
 }
 
+.preloader-text {
+  color: var(--text);
+  margin-top: 1.5rem;
+  font-family: 'Inter', sans-serif;
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+  font-weight: 500;
+}
+
 @keyframes preload {
   to {
     width: 100%
@@ -562,104 +571,8 @@ body {
   color: var(--orange)
 }
 
-/* Slide indicators */
-.hero-indicators {
-  position: absolute;
-  bottom: 5rem;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  gap: .8rem;
-  animation: fadeInUp 1s ease 1.5s both
-}
 
-.hero-dot {
-  width: 40px;
-  height: 4px;
-  background: rgba(255, 255, 255, .25);
-  border: none;
-  cursor: pointer;
-  transition: all .4s;
-  position: relative;
-  overflow: hidden;
-  padding: 0
-}
 
-.hero-dot.active {
-  background: rgba(255, 255, 255, .15)
-}
-
-.hero-dot.active .dot-progress {
-  display: block;
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 0;
-  background: var(--orange);
-  animation: dot-fill 6s linear forwards
-}
-
-.dot-progress {
-  display: none
-}
-
-@keyframes dot-fill {
-  0% {
-    width: 0
-  }
-
-  100% {
-    width: 100%
-  }
-}
-
-.hero-scroll {
-  position: absolute;
-  bottom: 2rem;
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: .5rem;
-  color: rgba(255, 255, 255, .6);
-  font-size: .65rem;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  animation: fadeInUp 1s ease 1.5s both;
-  opacity: .6
-}
-
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.2);
-  position: relative;
-  overflow: hidden
-}
-
-.scroll-line::after {
-  content: '';
-  position: absolute;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 50%;
-  background: var(--orange);
-  animation: scroll-down 2s ease infinite
-}
-
-@keyframes scroll-down {
-  0% {
-    top: -50%
-  }
-
-  100% {
-    top: 150%
-  }
-}
 
 /* ── SECTIONS ── */
 .section {
